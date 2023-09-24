@@ -1,0 +1,44 @@
+ <tr>
+          <td class="Users">
+            <img src="https://github.com/ThiagoMassenoMaciel.png" alt="Image mde perfil do respectivo usuário que ja foi adicionado nesta Pagina de favoritos">
+            <a href="https://github.com/ThiagoMassenoMaciel">
+              <p>ThiagoMassenoMaciel</p>
+              <span>Thiago Masseno Maciel</span>
+            </a>
+          </td>
+          <td class="Repositories">64</td>
+          <td class="Followers">22</td>
+          <td>
+            <button class="remove" >&times;</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="Users">
+            <img src="https://github.com/maykbrito.png" alt="Image mde perfil do respectivo usuário que ja foi adicionado nesta Pagina de favoritos">
+            <a href="https://github.com/maykbrito">
+              <p>maykbrito</p>
+              <span>mayk brito</span>
+            </a>
+          </td>
+          <td class="Repositories">64</td>
+          <td class="Followers">22</td>
+          <td>
+            <button class="remove" >&times;</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="Users">
+            <img src="https://github.com/diego3g.png" alt="Image mde perfil do respectivo usuário que ja foi adicionado nesta Pagina de favoritos">
+            <a href="https://github.com/diego3g">
+              <p>DiegoFernandes</p>
+              <span>Diego Fernandes</span>
+            </a>
+          </td>
+          <td class="Repositories">79</td>
+          <td class="Followers">22.000</td>
+          <td>
+            <button class="remove" >&times;</button>
+          </td>
+        </tr>

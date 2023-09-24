@@ -1,0 +1,39 @@
+console.dir(Variavel que tenha a ancora a fim de juntar Js + Html )
+
+ex : 
+  const ancora = document.querySelector('pedaçoHTML')
+
+  console.dir(ancora)
+
+  vai exibir no console.log este elemento html como se fosse Objecto com proto propriedades
+
+
+  |Espere por uma promessa 
+
+  :::::before:::::::Aplaying:::::::
+
+  nameMethod( e ){
+    const variable = e;
+  }
+
+  :::::Aplaying:::::::
+
+  async nameMethod( e ){
+    const variable = await OtherMethod.FunctionByOtherClas( e )
+  }
+
+
+
+Ter acesso ao que a pessoa digitou no campo de texto input e guardar este valor em uma variável 
+
+
+   onadd(){
+        // lembrando que o root é a ancora que liga o js com elemento do html que tenha o id app 
+        const adButton = this.root.querySelector('.search button') 
+        adButton.onclick = () => {
+
+                const { value } = this.root.querySelector('.search input')
+                //console.log(value)
+                this.add(value)
+                
+               }

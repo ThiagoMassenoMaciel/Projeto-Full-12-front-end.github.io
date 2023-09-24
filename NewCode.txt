@@ -1,0 +1,23 @@
+console.dir(Variavel que tenha a ancora a fim de juntar Js + Html )
+
+ex : 
+  const ancora = document.querySelector('pedaçoHTML')
+
+  console.dir(ancora)
+
+  vai exibir no console.log este elemento html como se fosse Objecto com proto propriedades
+
+
+  |Espere por uma promessa 
+
+  :::::before:::::::Aplaying:::::::
+
+  nameMethod( e ){
+    const variable = e;
+  }
+
+  :::::Aplaying:::::::
+
+  async nameMethod( e ){
+    const variable = await OtherMethod.FunctionByOtherClas( e )
+  }

@@ -1,0 +1,210 @@
+16h   end   22h32
+
+Stoped 41'   M2 parte 1 
+
+STARTS 10h 45
+
+Error : 
+    sintaxe
+    eu criei a classe load mas n executei ela dentro do construtor mãe
+
+Error :
+        Favorites.js:16 
+        Favorites.js:48 
+        Favorites.js:54 Uncaught TypeError: Cannot set properties of null (setting 'textContent')
+            at Favorites.js:54:66
+            at Array.forEach (<anonymous>)
+            at FavoritesView.update (Favorites.js:46:22)
+            at new FavoritesView (Favorites.js:18:14)
+            at main.js:3:1
+            
+Error : 
+        row.querySelector('.user .Repositories').textContent = user.public_repos;
+        row.querySelector('.user .Followers').textContent = user.followers;
+        row.querySelector('.user .remove').onclick = () => {console.log(`apagar :${row}:`)};
+
+        have to be just       .Followers'
+
+    filter: brightness
+
+    border-collapse: collapse;   tirar os espaços do cabeçalho da tabela 
+
+    odd  todos os filhos que são impares 
+    even todos os filhos que são par 
+
+    table tr:nth-child(even){
+    background-color: hsl(0, 0%, 93%);
+    }
+
+    table tr:nth-child(odd){
+    background-color: hsl(0, 0%, 87%);
+    }
+
+    box-shadow: postionX    positionY   seuSIZEblur()  SEUspread   SUAcor;
+
+    box-shadow: 0 0 .4rem .2rem
+
+
+
+    Arquivos js 
+    Uma vai construir a tabela 
+
+    Outra vai fazer a lógica dos dados a serem apresentados
+        E unir as duas com a ideia de herança 
+
+
+
+    CreateRow(){
+                const tr = document.createElement('tr')
+
+        const content = `<td class="Users">
+            <img src="https://github.com/ThiagoMassenoMaciel.png" alt="Image mde perfil do respectivo usuário que ja foi adicionado nesta Pagina de favoritos">
+            <a href="https://github.com/ThiagoMassenoMaciel">
+                <p>ThiagoMassenoMaciel</p>
+                <span>Thiago Masseno Maciel</span>
+            </a>
+            </td>
+            <td class="Repositories">64</td>
+            <td class="Followers">22</td>
+            <td>
+            <button class="remove" >&times;</button>
+            </td>`
+
+        tr.innerHTML = content 
+    }
+
+        // apagar a linha dentro da classe que esta mexendo com os dados 
+
+
+        SE RETORNAR TRUE EU MANTENHO NA NOVA ARRAY
+        SE FOR FALSE EU TIRO DA NOVA ARRAY
+    delete(user){
+
+        // Higher order functions (map , filter , find , reduce)
+        const  filteredEntries = this.entries.filter( entry => 
+        {
+          console.log(entry)
+          return true;
+            // this will returns the two elements from array cuz its true
+        }
+        console.log(filteredEntries)    
+        )
+                
+    }
+
+    same 
+
+    delete(user){
+        const filteredEntries = this.entries.filter( entry => { return true })
+        console.log(filteredEntries)
+
+    }
+
+    a logica que eu aplicar retornar falso apagarei o elemento da array 
+
+
+    ::::::::::::::::::::Usando Imutabilidade::::::::::::::::::::::::
+    delete(user){        
+        const filteredEntries = this.entries.filter( entry => { return false })
+        console.log(filteredEntries)    
+
+    }
+    :::::::::::::::::::n usando a imutabilidade::::::::::::::::::::: eito errado  NO REACT ISSO QUEBRA A APLICATION ALL 
+    this.entries.lenght = 1 
+    console.log(entries)
+
+
+
+    this project Have the logic after the LocalStorage Aplication 
+
+
+    after must in order to use   entries from load method muyust use this way :
+
+        this.load() {     // para cada elemento { object literals } que eu colocar dentro da array execute CreateRow()
+            const entries = localStorage.getItem('@github-favorites:') // escolhido nome da key
+            console.log(entries)
+            this.entries = []
+        }
+
+
+LOCASTORAGE usaremos uma api do github para trazer os dados usado no projeto através do fetch 
+
+    procurar o nome do perfil no github 
+    pegar os seus dados 
+    e salvar o usuario no meu local Storage 
+    
+
+    como nos se comunicamos com uma api ? 
+    entra no endereço url com api publica 
+
+    Com a url de uma:
+     api.site/perfil 
+    eu tenho retornado um JSON
+
+
+    ERROR 
+        loguin 
+        user.loguin
+        mykbrito    - escrever o nome de um usuario do github errado 
+
+AULA 10 
+    Fazer o seguinte : 
+    event : pessoa depois de digitar o usuario clicou no botão
+    react : ad uma nova linha da tabela com 
+                                            :foto de perfil 
+                                            :nome de usuario e de perfil 
+                                            : seguidores 
+                                            : repositorios 
+
+    essa funcionalidade é responsabilidade de quem ?
+
+    o pedaço de arquivo js que exibe os dados para o site 
+
+        erro :   usando a mesma ancora para difeentes funcionalidades um deles vai retornar null 
+        por isso usei o this 
+        
+            onadd(){
+// lembrando que o root é a ancora que liga o js com elemento do html que tenha o id app 
+        const adButton = this.root.querySelector('.search button') 
+        adButton.onclick = () => {
+            const input = adButton.querySelector('search input')   // valueToSearch from github
+            console.log("isso aqui é usando o dir")
+            console.dir(input)   // this dir its mean that you will show on console the element from html and your attributes properties like object 
+
+       }
+    }
+
+    como funciona a logica para conseguir coletar o valor digitado pelo usuário 
+    pegar este e buscar na api do github 
+    retornar a nova linha da tabela 
+
+    desestruturando a ancora do elemento html input .propriedade html que tem o que a pessoa digitou no input 
+    tirando de dentro do input somente o value 
+
+    a call back dentro do evento de apetar no button
+    before:::::
+      const input = this.root.querySelector('.search input')
+    after::::::
+      const { value } = this.root.querySelector('.search input')
+
+
+    Error :
+        Todos os nomes colocados no input e depois de clicado no button aparece um alert USER IS NOT DEFINED
+    
+    Error : 
+        não carregava a foto por causa do erro 
+        row.querySelector('.user img').src = `https://github.com/${user.loguin}.png`; 
+
+        é para ser login 
+
+    Error :
+        quando eu depois de ja add novo usuario para a tabela se eu apertar de novo ele repete o nome da tabela 
+            coloca um textContent para = " " depois de clicado no botão    
+        quando eu clico em um x para apagar - acontece que apaga é tudo 
+            escrevi loguin em vez de login dentro da função  delete( user )
+
+            .filter( entry => entry.loguin !== user.loguin)
+
+    Error: não esta aparecendo o campo do texto que tem no elemento span 
+                row.querySelector('.user a span').textContent = user.loguin;
+                deveria ser login 
